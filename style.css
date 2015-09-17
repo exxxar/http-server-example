@@ -1,0 +1,523 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+	height: 100%;
+	background:url('img/1.jpg') fixed;
+	background-size:cover;
+	overflow-y: scroll;
+}
+.wrapper {
+	width: 100%;
+	min-width: 1000px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+	height:10px;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+	background-color:#80B3F3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color:#1E61E8;
+}
+*:focus { outline: none; }
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	position:relative;
+	width:100%;
+	height: 100px;
+	z-index:1000000;
+	top:0;
+	transition:1s;
+}
+
+.header-hide {
+	top:-200px;
+	transition:1s;
+}
+nav {
+	width:1000px;
+	position:relative;
+	margin:0 auto;
+	top:25px;
+}
+
+nav ul {
+	width:850px;
+	height:50px;
+	position:relative;
+	margin:0 auto;
+}
+
+nav ul li {
+	float:left;
+	padding-top:15px;
+}
+nav ul li a{
+	padding:15px 115px 15px 115px;
+	text-decoration:none;
+	background:#F5F5F5;
+	color:black;
+	font-size:10pt;
+	margin-top:10px;
+	border:1px #D1D1D1 solid;
+	transition:background 1s;
+}
+
+nav ul li a:hover{
+	background:#D8D6D6;
+	transition:background 1s;
+}
+
+.active-menu {
+	background:black;
+	transition:1s;
+	color:#fff;
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+section {
+	width:100%;
+	position:absolute;
+	top:100px;
+}
+.section-1 {
+	height:1000px;
+	top:-900px;
+	opacity:0;
+	z-index:0;
+}
+
+.section-0 {
+	height:400px;
+}
+
+section .content {
+	position:relative;
+	margin:0 auto;
+	width:1000px;
+	height:100%;
+	margin-bottom:50px;
+}
+
+.section-2 {
+	height:1000px;
+	top:-900px;
+	opacity:0;
+	z-index:0;
+}
+
+.section-3 {
+	height:1200px;
+	top:-900px;
+	opacity:0;
+	z-index:0;
+}
+
+.up{
+	transition:1s;
+	top:100px;
+	opacity:1;
+	z-index:1000;
+}
+
+.down{
+	transition:1s;
+	top:-900px;
+	opacity:0;
+	z-index:0;
+}
+
+.an {
+	-webkit-animation:1s anim;
+}
+@-webkit-keyframes anim {
+	0,100% {
+		top:0px;
+	}
+	50% {
+		top:-100px;
+	}
+}
+
+.content > h1{
+	font-family: 'Lobster', cursive;
+	font-size:120pt;
+	line-height:190%;
+	text-align:center;
+	width:100%;
+}
+
+.content > h3{
+	font-family: 'Lobster', cursive;
+	font-size:16pt;
+	margin-top:-70px;
+	margin-bottom:100px;
+	text-align:center;
+	width:100%;
+	color:#0B72C1;
+}
+
+.content > h6{
+	font-family: 'Lobster', cursive;
+	font-size:10pt;
+	margin-top:-50px;
+	margin-bottom:50px;
+	text-align:center;
+	width:100%;
+	color:gray;
+}
+
+.content > h6 > s {
+	color:#0B72C1;
+	text-decoration:none;
+	font-weight:100;
+}
+
+.end {
+	float:left;
+	font-family: 'Lobster', cursive;
+	font-size:10pt;
+	margin-bottom:50px;
+	text-align:center;
+	width:100%;
+	color:gray;
+}
+
+.end > a {
+	color:#0B72C1;
+	text-decoration:none;
+	font-weight:100;
+}
+
+.about-item {
+	float:left;
+	//border:1px green solid;
+	padding:20px 10px 20px 10px;
+	font-family: 'Lobster', cursive;
+}
+
+.about-item h2{
+	font-size:26pt;
+	text-align:center;
+	width:100%;
+	margin-bottom:30px;
+}
+
+.about-item hr {
+	width:100%;
+	height:20px;
+	background:url('img/1.png') center no-repeat;
+	background-size:contain;
+	border:none;
+	margin-bottom:20px;
+}
+
+.about-item p {
+	font-size:12pt;
+	text-align:center;
+	line-height:150%;
+	margin-top:10px;
+}
+.about-item:nth-of-type(1){
+	width:280px;
+	height:400px;
+	color:#0B72C1;
+}
+
+.about-item:nth-of-type(2){
+	width:380px;
+	height:400px;
+	color:gray;
+}
+
+.about-item:nth-of-type(3){
+	width:280px;
+	height:400px;
+}
+
+.social {
+	width:100%;
+	height:70px;
+	float:left;
+}
+
+.social ul {
+	width:650px;
+	height:100%;
+	position:relative;
+	margin:0 auto;
+}
+
+.social ul  li {
+	float:left;
+	padding-top:15px;
+}
+
+.social ul li a{
+	padding:20px 75px 20px 75px;
+	background:#d1d1d1;
+	border:1px #fff solid;
+	transition:background 1s;
+}
+
+.social ul li a:hover{
+	background:#fff;
+	transition:background 1s;
+}
+
+.section-3 form {
+	width:340px;
+	position:relative;
+	top:50px;
+	margin:0 auto;
+}
+
+.section-3 form input[type="text"]{
+	width:300px;
+	height:50px;
+	border-radius:10px;
+	padding:0 20px 0 20px;
+	border:1px #D1D1D1 solid;
+	margin-top:10px;
+	font-size:10pt;
+}
+
+.section-3 form input[type="text"]:focus{
+	background-color:#F5F2F2;
+}
+
+.section-3 form textarea {
+	width:300px;
+	height:30px;
+	padding:15px 20px 0px 20px;
+	border-radius:10px;
+	border:1px #D1D1D1 solid;
+	margin-top:10px;
+	font-size:10pt;
+	transition:height 0.5s;
+	min-width:300px;
+}
+
+.section-3 form textarea:focus{
+	transition:height 0.5s;
+	height:150px;
+	background-color:#F5F2F2;
+}
+
+.section-3 form a{
+	float:left;
+	padding:15px 150px 15px 150px;
+	margin-top:10px;
+	font-size:10pt;
+	background:#0B72C1;
+	border-radius:10px;
+	color:white;
+	text-decoration:none;
+	transition:1s;
+	cursor:pointer;
+}
+
+.section-3 form a:hover{
+	background:#3941BB;
+	transition:1s;
+}
+
+
+
+.section-3 form a:focus{
+	transition:1s;
+	transform:translateY(3px);
+}
+
+.section-3 h2 {
+	font-family: 'Lobster', cursive;
+	font-size:20pt;
+	margin-top:50px;
+	margin-bottom:0px;
+	text-align:center;
+	width:100%;
+	color:#0B72C1;
+}
+.map {
+	width:800px;
+	height:300px;
+	border-radius:10px;
+	border:5px #D1D1D1 solid;
+	position:relative;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.map iframe{
+	width:100%;
+	height:100%;
+	-webkit-filter: grayscale(100%);  
+}
+
+.portfolio-item {
+	float:left;
+	width:300px;
+	height:250px;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+.img {
+	position:relative;
+	width:280px;
+	height:200px;
+	margin-top:20px;
+	margin-left:10px;
+	border-radius:10px;
+	overflow:hidden;
+	transition:1s;
+}
+
+.img img {
+	width:500px;
+	position:relative;
+	top:-50px;
+	left:-50px;
+	transition:1s;
+}
+
+.img:hover img {
+	width:280px;
+	left:0;
+	top:0;
+	transition:1s;
+}
+.img:hover {
+	transition:1s;
+	height:220px;
+	margin-top:10px;
+}
+.img:hover:after{
+	height:60px;
+	top:160px;
+	border-radius:0 0 10px 10px;
+	transition:1s;
+	background:rgba(0,0,0,0.8);
+}
+
+.text{
+	position:relative;
+	top:-45px;
+	z-index:10000;
+	left:20px;
+	font-size:10pt;
+	font-family: 'Lobster', cursive;
+	width:280px;
+	height:30px;
+	opacity:0;
+	transition:1s;
+}
+
+.text p{
+	position:relative;
+	width:100%;
+	line-height:120%;
+	color:#fff;
+	transition:1s;
+}
+.img:hover ~ .text{
+	position:relative;
+	left:20px;
+	opacity:1;
+	transition:1s;
+}
+.img:after {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	transition:height 1s, top 1s;
+	width:280px;
+	height:200px;
+	border-radius:10px;
+	background:rgba(255,255,255,0.5);
+	transition:1s;
+}
+
+.text-anim {
+	-webkit-animation:textAnim 1s infinite;
+}
+
+@-webkit-keyframes textAnim {
+	0,100% {background-color:#0B72C1;}
+	50% {background-color:#0BC60F;}
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	position:relative;
+	width:100%;
+	bottom:0;
+	border:1px green solid;
+}
